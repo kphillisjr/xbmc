@@ -6,6 +6,7 @@ SRCS += DVDVideoPPFFmpeg.cpp
 
 ifeq (@USE_VDPAU@,1)
 SRCS += VDPAU.cpp
+INCLUDES += $(pkg-config --cflags vdpau)
 endif
 ifeq (@USE_VAAPI@,1)
 SRCS += VAAPI.cpp
